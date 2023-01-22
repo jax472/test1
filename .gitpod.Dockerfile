@@ -7,6 +7,7 @@ RUN apt-get install -y \
     sudo \
     git \
     vim nano \
+    docker.io \
     python3 \
     python3-pip \
     python-is-python3
