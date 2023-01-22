@@ -1,6 +1,3 @@
-FROM gitpod/workspace-full
+FROM ubuntu:20.04
 
-RUN sudo apt-get update \
- && sudo apt-get install -y \
-    postgresql \
- && sudo rm -rf /var/lib/apt/lists/*
+RUN sudo apt-get update
