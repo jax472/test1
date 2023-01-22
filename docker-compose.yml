@@ -15,10 +15,12 @@ services:
     image: dpage/pgadmin4
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_EMAIL: admin@comp520.com
       PGADMIN_DEFAULT_PASSWORD: password
     ports:
       - "5050:80"
+    volumes:
+      - ./databases:/pgadmin4/databases:ro
   mysql_db:
     container_name: mysql_db
     image: mysql:8.0.32

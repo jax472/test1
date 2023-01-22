@@ -10,9 +10,9 @@ Installs the following:
 pgAdmin4 is exposed on port 5050.
 - Open web preview for port 5050
 - Use the following credentials to sign in to pgadmin:
-    - email: admin@admin.com
+    - email: admin@comp520.com
     - password: password
-    - To change these, view the docker-compose.yml
+    - To change these, view the docker-compose.yml.
 - Register the postgres server
     - Once signed in to pgadmin, click server->register->server
     - On the general tab:
@@ -22,6 +22,10 @@ pgAdmin4 is exposed on port 5050.
         - username: postgres
         - password: password
         - to change these, view the docker-compose.yml
+- Copy the sample databases to the default pgadmin4 storage location in the container
+    - The default location is - /var/lib/pgadmin/storage/<username>
+    - docker exec -i postgres_db
+    - cp -r databases/ /var/lib/pgadmin/storage/admin_comp520.com
 
 # Connect to MySQL w/ PhpAdmin
 phpAdmin is exposed on port 8081
