@@ -4,10 +4,9 @@ image:
 tasks:
   - init: |
       docker pull postgres:15.1
-      docker run -d -p 5432:5432 --name postgres_db -e POSTGRES_PASSWORD=password postgres:15.1 &&
+      docker run -d -p 5432:5432 --name postgres_db -e POSTGRES_PASSWORD=password postgres:15.1
       docker pull mysql:8.0.32
-      docker run -d -p 3306:3306 --name mysql_db -e MYSQL_ROOT_PASSWORD=password mysql:8.0.32 &&
-      sleep 5s &&
+      docker run -d -p 3306:3306 --name mysql_db -e MYSQL_ROOT_PASSWORD=password mysql:8.0.32
 
 ports:
   - port: 5432
