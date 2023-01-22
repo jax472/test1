@@ -1,5 +1,8 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
+# Install custom tools, runtime, etc.
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt update
 RUN apt-get install -y \
     sudo \
     git \
