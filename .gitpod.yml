@@ -8,7 +8,6 @@ tasks:
   - name: copy databases to containers
     init: gp sync-await databases-up
     command:
-      docker exec -i pgadmin4 mkdir /var/lib/pgadmin/storage/admin_comp520.com
       docker exec -i pgadmin4 cp -r databases/ /var/lib/pgadmin/storage/admin_comp520.com
 
 
