@@ -4,8 +4,13 @@ image:
 tasks:
   - init: |
       docker-compose up -d
+      gp sync-done databases-up
+  - name: copy databases to containers
+    init: gp sync-await databases-up
+    command:
       docker exec -i pgadmin4 mkdir /var/lib/pgadmin/storage/admin_comp520.com
       docker exec -i pgadmin4 cp -r databases/ /var/lib/pgadmin/storage/admin_comp520.com
+
 
 ports:
   - port: 5432
